@@ -71,18 +71,6 @@ g++ -std=c++17 -Wall -Wextra src/main.cpp -o minesweeper
 ./minesweeper
 ```
 
-## Implementation Notes
-
-- hw manages the actual board.
-  - * means mine.
-  - - means safe cell.
-- bhw manages the visible board.
-  - # means hidden.
-  - P means flag.
-  - . or numbers are shown after opening cells.
-- The board is generated after the first open command so that the first opened cell is always safe.
-- Empty cells are opened recursively using 8-direction search.
-
 ## Verified Environment
 
 - C++17
