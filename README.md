@@ -28,19 +28,15 @@ C++で実装したコンソール版マインスイーパーです。
 
 起動後、以下の形式でコマンドを入力します。
 
-```text
 command row col
-```
 
 Examples:
 
-```text
 o 0 0
 open 3 4
 f 2 5
 flag 7 1
 help
-```
 
 Commands:
 
@@ -56,18 +52,24 @@ Rows and columns are indexed from 0 to 9.
 
 Windows PowerShell:
 
+```powershell
 g++ -std=c++17 -Wall -Wextra src/main.cpp -o minesweeper.exe
 .\minesweeper.exe
+```
 
 Git Bash / MSYS2:
 
+```bash
 g++ -std=c++17 -Wall -Wextra src/main.cpp -o minesweeper.exe
 ./minesweeper.exe
+```
 
 Linux / WSL:
 
+```bash
 g++ -std=c++17 -Wall -Wextra src/main.cpp -o minesweeper
 ./minesweeper
+```
 
 ## Implementation Notes
 
