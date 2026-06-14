@@ -1,36 +1,24 @@
-# C++ Console Minesweeper
+# cpp-minesweeper
 
-C++で実装したコンソール版マインスイーパーです。
+C++で作ったコンソール版マインスイーパーです。  
+2次元配列、8方向探索、再帰処理の練習として作りました。
 
-競技プログラミングで学んだ2次元配列、8方向探索、再帰処理を使って、ユーザー入力に応じて盤面状態が変化するゲームを作りました。
+## 機能
 
-## Features
-
-- 10x10 のマインスイーパー
-- 地雷数は15個
-- 初回に開いたマスは必ず安全
-- 8方向探索による周囲地雷数の計算
-- 再帰処理による空白マスの連鎖オープン
-- 旗を立てる機能
+- 10x10 の盤面
+- 地雷15個
+- 初回に開くマスは安全
+- 空白マスの連鎖オープン
+- 旗コマンド
 - 勝敗判定
 
-## Symbols
+## 遊び方
 
-| Symbol | Meaning |
-|---|---|
-| `#` | Hidden cell |
-| `P` | Flag |
-| `.` | Opened empty cell |
-| `1`-`8` | Number of adjacent mines |
-| `*` | Mine |
-
-## How to Play
-
-起動後、以下の形式でコマンドを入力します。
+以下の形式で入力します。
 
 command row col
 
-Examples:
+例:
 
 o 0 0
 open 3 4
@@ -38,40 +26,31 @@ f 2 5
 flag 7 1
 help
 
-Commands:
+`o` / `open`: マスを開く  
+`f` / `flag`: 旗を立てる  
+`help`: 遊び方を表示する
 
-| Command | Description |
-|---|---|
-| o, open | Open a cell |
-| f, flag | Put a flag on a cell |
-| help | Show help message |
+座標は `0` から `9` で指定します。
 
-Rows and columns are indexed from 0 to 9.
+## ビルドと実行
 
-## Build and Run
-
-Windows PowerShell:
+Windows PowerShellの場合:
 
 ```powershell
 g++ -std=c++17 -Wall -Wextra src/main.cpp -o minesweeper.exe
 .\minesweeper.exe
 ```
 
-Git Bash / MSYS2:
+Git Bash / MSYS2の場合:
 
 ```bash
 g++ -std=c++17 -Wall -Wextra src/main.cpp -o minesweeper.exe
 ./minesweeper.exe
 ```
 
-Linux / WSL:
+Linux / WSLの場合:
 
 ```bash
 g++ -std=c++17 -Wall -Wextra src/main.cpp -o minesweeper
 ./minesweeper
 ```
-
-## Verified Environment
-
-- C++17
-- g++ / MSYS2 UCRT64
