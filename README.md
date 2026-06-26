@@ -73,3 +73,6 @@ Linux / WSLの場合:
 g++ -std=c++17 -Wall -Wextra src/main.cpp -o minesweeper
 ./minesweeper
 ```
+
+## AI使用状況
+不使用
